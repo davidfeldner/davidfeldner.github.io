@@ -1,8 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;700&display=swap');
+
+:root {
+    --primary: #f5ba20;
+    --secondary: #e88b00;
+}
 
 html {
     color: white;
     font-family: Roboto;
+    text-align: center;
+    scroll-behavior: smooth;
 }
 
 
@@ -10,7 +17,7 @@ html, body, h1, h2 {
     
     margin: 0;
     padding: 0;
-    height: 100%;
+    
 
 }
 
@@ -18,39 +25,140 @@ a {
     text-decoration: none;
 }
 
+img {
+    height: 5em;
+}
+
 .background {
     background-image: url("./images/night-city.jpg");
-    height: 100vh;
+    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
-.textbox {
+.hero {
     text-align: center;
-    padding-top: 40vh;
-
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 
-.textbox h1 {
-    font-size: 2.5rem;
-    padding-bottom: 0.4em;
+.hero h1 {
+    margin-top: auto;
+    font-size: 5rem;
+    
+    padding-bottom: 1em;
+}
+
+.hero img {
+    margin-top: auto;
+    margin-bottom: 1em;
 }
 
 .buttons {
     display: flex;
     justify-content: center;
-       
+    
 }
 
 .button + .button{
-    margin-left: 2em;
+    margin-left: 4em;
 }
 
 .button {
-    background-color: #DDA81E;
-    padding: 0.5em;
+    background-color: var(--primary);
+    padding: 0.8em;
     border-radius: 1em;
     color: black;
+    
 }
+
+.button h2 {
+    font-weight: 400;
+    
+}
+
+.hero .button {
+    font-size: 1.5em;
+}
+
+.about {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.9);
+    
+}
+
+.about h2 {
+    padding: 2em;
+    padding-top: 0;
+
+}
+
+.section-title {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    font-size: 3em;
+}
+
+.opgaver .section-title {
+    margin-top: 2em;
+    padding-bottom: 1em;
+    background-color:var(--secondary);
+    
+}
+
+.section-text {
+    font-weight: 300;
+}
+
+.grid {
+    display: grid;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    grid-template-columns: 30vw 30vw;
+    column-gap: 10vw;
+    row-gap: 3em;
+    padding-bottom: 10em;
+    padding-top: 2em;
+    background-color: rgba(200, 200, 200, 0.8);
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: black;
+    height: 15em;
+    border-radius: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grid-item .button {
+    display: inline-block;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+
+.grid-item h2 {
+    font-weight: 400;
+}
+
+.grid-item * + *{
+    padding-top: 1rem;
+}
+
+
+
+.footer {
+    height: 15em;
+    background-color: var(--secondary);
+    margin-top: 5em;
+}
+
